@@ -1,0 +1,6 @@
+{
+  "name": "Conecta Estudo",
+  "description": "Encontre seu grupo de estudo ideal e aprenda colaborativamente com estudantes de todo o Brasil para o ENEM e vestibulares.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
