@@ -52,32 +52,6 @@ export default function App() {
   };
 
   // Screen selection via top quick switcher
-  const handleSelectScreen = (screenId: ScreenId) => {
-    setCurrentScreen(screenId);
-    if (screenId === 'onboarding') {
-      setIsLoggedIn(false);
-    } else if (screenId === 'login') {
-      setIsLoggedIn(false);
-    } else if (screenId === 'register') {
-      setIsLoggedIn(false);
-    } else if (screenId === 'home') {
-      setIsLoggedIn(true);
-      setMainTab('inicio');
-    } else if (screenId === 'explore') {
-      setIsLoggedIn(true);
-      setMainTab('explorar');
-    } else if (screenId === 'my-groups') {
-      setIsLoggedIn(true);
-      setMainTab('meus-grupos');
-    } else if (screenId === 'filter') {
-      setIsFilterOpen(true);
-    } else if (screenId === 'detail') {
-      setIsLoggedIn(true);
-    } else if (screenId === 'virtual-room') {
-      setIsLoggedIn(true);
-      setIsVirtualRoomOpen(true);
-    }
-  };
 
   // Toggle user membership in a group
   const handleToggleJoin = (groupToToggle: StudyGroup) => {
@@ -295,13 +269,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#eaecf2] flex flex-col font-sans antialiased text-[#1a1c1c]">
       {/* Top Demo Bar for Reviewing All Screens */}
-      <ScreenSwitcherBar
-        currentScreen={currentScreen}
-        onSelectScreen={handleSelectScreen}
-        isMobileFrame={isMobileFrame}
-        onToggleFrame={() => setIsMobileFrame(!isMobileFrame)}
-      />
-
       {/* Main Viewport Container */}
       <div className="flex-1 flex justify-center items-start py-0 sm:py-4 sm:px-4">
         <div
